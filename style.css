@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+h1{
+    color: white;
+    font-size: 70px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+body{
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#imege_slider{
+    width: 47%;
+    height: 400px;
+    position: relative;
+    /* background-color: red; */
+}
+
+#imege_slider i{
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+#imege_slider .fa-angle-left{
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+}
+
+#imege_slider .fa-angle-right{
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+}
+#imege_slider .window {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#imege_slider .window img{
+    width: 900px;
+    height: 400px;
+    margin-left: 14px;
+    /* width: calc(100% / 1); */
+    /* width: 100%; */
+}
+
+#imege_slider .window img:first-child{
+    margin-left: 0;
+}
+
+
+@media screen and (max-width: 500px) {
+    h1{
+        font-size: 30px;
+    }
+    #imege_slider{
+        height: 200px;
+        width: 90%;
+    }
+
+    #imege_slider .window img{
+        height: 200px;
+    }
+}
