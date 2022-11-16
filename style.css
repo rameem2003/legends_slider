@@ -5,6 +5,15 @@
     font-family: cursive;
 }
 
+body{
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
 h1{
     color: white;
     font-size: 70px;
@@ -12,63 +21,49 @@ h1{
     text-align: center;
 }
 
-body{
-    background-color: cornflowerblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-}
 
-#imege_slider{
-    width: 47%;
-    height: 400px;
+
+#frame{
+    width: 60%;
+    height: 480px;
+    border: 8px solid burlywood;
     position: relative;
-    /* background-color: red; */
-}
-
-#imege_slider i{
-    height: 40px;
-    width: 40px;
-    font-size: 25px;
-    border-radius: 50%;
-    background-color: whitesmoke;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    cursor: pointer;
-}
-
-#imege_slider .fa-angle-left{
-    top: 50%;
-    transform: translateY(-50%);
-    left: -20px;
-}
-
-#imege_slider .fa-angle-right{
-    top: 50%;
-    transform: translateY(-50%);
-    right: -20px;
-}
-#imege_slider .window {
-    display: flex;
-    align-items: center;
+    box-sizing: border-box;
     overflow: hidden;
-    scroll-behavior: smooth;
 }
 
-#imege_slider .window img{
-    width: 900px;
-    height: 400px;
-    margin-left: 14px;
-    /* width: calc(100% / 1); */
-    /* width: 100%; */
+#frame .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: 0.5s linear;
 }
 
-#imege_slider .window img:first-child{
-    margin-left: 0;
+#frame i{
+    height: 50px;
+    width: 50px;
+    font-size: 33px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#frame #left {
+    left: -24px;
+    justify-content: flex-end;
+    margin-right: 5px;
+}
+
+#frame #right {
+    right: -24px;
+    justify-content: flex-start;
 }
 
 
@@ -76,12 +71,8 @@ body{
     h1{
         font-size: 30px;
     }
-    #imege_slider{
-        height: 200px;
-        width: 90%;
-    }
-
-    #imege_slider .window img{
-        height: 200px;
+    #frame{
+        width: 89%;
+        height: 194px;
     }
 }
